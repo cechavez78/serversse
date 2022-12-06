@@ -1,5 +1,5 @@
 const app = require("express")();
-import { PORT } from "./config";
+const PORT = process.env.PORT || 3000;
 
 app.get("/stream", (req, res) => {
   res.setHeader("Content-Type", "text/event-stream");
