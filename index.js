@@ -1,6 +1,10 @@
 const app = require("express")();
 const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+  res.send("alo!");
+});
+
 app.get("/stream", (req, res) => {
   res.setHeader("Content-Type", "text/event-stream");
   send(res);
