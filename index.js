@@ -1,4 +1,5 @@
 const app = require("express")();
+import { PORT } from "./config";
 
 app.get("/stream", (req, res) => {
   res.setHeader("Content-Type", "text/event-stream");
@@ -12,6 +13,6 @@ function send(res) {
   }, 1000);
 }
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Server runing");
 });
