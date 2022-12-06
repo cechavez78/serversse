@@ -14,5 +14,5 @@ function send(res) {
 }
 
 app.listen(PORT, () => {
-  console.log("Server runing");
+  console.log("Server running: ", PORT);
 });
